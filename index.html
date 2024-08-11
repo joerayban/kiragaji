@@ -1,0 +1,158 @@
+<style type="text/css">
+    .Table
+    {
+        display: table;
+    }
+    .Title
+    {
+        display: table-caption;
+        text-align: center;
+        font-weight: bold;
+        font-size: larger;
+    }
+    .Heading
+    {
+        display: table-row;
+        font-weight: bold;
+        text-align: right;
+    }
+    .Row
+    {
+        display: table-row;
+    }
+    .Cell
+    {
+        display: table-cell;
+        border: ;
+        border-width: thin;
+
+    }
+</style>
+
+<html>
+ <head>
+<title>Kira Gaji Baru</title>
+<script type="text/javascript">
+    function KIRA()
+    {
+        //Obtain user inputs
+        var pokok=Number(document.getElementById("pokok").value);
+        //var heightunits=document.getElementById("heightunits").value;
+        var gred=Number(document.getElementById("gred").value);
+        //var weightunits=document.getElementById("weightunits").value;
+		var elaun=Number(document.getElementById("elaun").value);
+
+        //Convert all units to metric
+        //if (heightunits=="inches") pokok/=39.3700787;
+        //if (weightunits=="lb") gred/=2.20462;
+
+        //Perform calculation
+        //var BMI=gred/Math.pow(pokok,2);
+		var gajibaru=Math.round(gred*pokok) ;
+
+        //Display result of calculation
+        document.getElementById("naik").innerText=Math.round(gajibaru*100)/100;
+
+        var output =  Math.round(gajibaru*100)/100
+		//var output =  Math.round(gajibaru*100)/100
+        //if (output<18.5)
+        //document.getElementById("comment").innerText = "Underweight";
+      //else   if (output>=18.5 && output<=25)
+       // document.getElementById("comment").innerText = "Normal";
+     //else   if (output>=25 && output<=30)
+       // document.getElementById("comment").innerText = "Obese";
+     //else   if (output>30)
+        document.getElementById("pokokbaru").innerText =Math.round(output+pokok);
+		document.getElementById("kasarbaru").innerText =Math.round(output+pokok+elaun);
+       // document.getElementById("answer").value = output; 
+    }
+	
+	 function fun(){  
+   document.getElementById("BORANG").reset();  
+ }   
+ 
+</script>
+ </head>
+ 
+ <body style = "text-align: center;">  
+
+ 
+ <div style = "background: lightblue;"> 
+ <form id = "BORANG" action = "#" style = "font-size: 20px;" >  
+ 
+        <p><div style = "background: pink;">  
+<font color = "red" size = "6px">  
+    <b> PENGIRAAN KENAIKAN GAJI BARU DISEMBER 2024 </b>  
+  </font>  
+ </div></p>
+ <div style = "background: lightblue;"> 
+ <form id = "BORANG" action = "#" style = "font-size: 20px;" > 
+<br>
+
+<center>
+
+<div class="Table">
+    <div class="Row">
+        <div class="Cell">
+            <p align="right">Gaji Pokok Sekarang :</p>
+        </div>
+        <div class="Cell">
+            <p align="left"><input type="text" id="pokok"/></p>
+        </div>
+    </div>
+    <div class="Row">
+        <div class="Cell">
+            <p align="right">Jumlah Elaun :</p>
+        </div>
+        <div class="Cell">
+            <p align="left"><input type="text" id="elaun"/>	</p>
+        </div>
+    </div>
+    <div class="Row">
+        <div class="Cell">
+            <p align="right">Gred :</p>
+        </div>
+        <div class="Cell">
+            <p align="left"><select type="multiple" id="gred">
+		<option  selected="selected">Sila pilih gred</option>
+        <option value="0.427">Gred 1-16 👉 *42.7%</option>
+		<option value="0.4">Gred 17-26 👉 *40%</option>
+        <option value="0.3">Gred 27-40 👉 *30%</option>
+		<option value="0.2">Gred 41-48 👉 *20%</option>
+		<option value="0.15">Gred 52-54 👉 *15%</option>
+		<option value="0.15">JUSA A,B,C 👉 *15%</option>
+		<option value="0.15">TURUS i,ii,iii 👉 *15%</option>
+    </select></p>
+        </div>
+    </div>
+</div>
+
+</center>
+
+</p>
+<input type = "button" value = "KOSONGKAN" onClick = "fun()"/> 
+<input type="submit" value="KIRA SEKARANG" onclick="KIRA();">
+<h1>Kenaikan sebanyak : RM<span id="naik"> ?</span></h1>
+<h2>Jumlah Gaji Pokok Terbaru : RM<span id="pokokbaru"> ?</span> </h2> 
+<h2>Jumlah Gaji Kasar Terbaru : RM<span id="kasarbaru"> ?</span> </h2> 
+<br><br><br>
+</form>
+</div>
+
+<div style = "background: pink;">  
+<font color = "red" size = "3px">  
+    <b> ™Disediakan Oleh JOERAYBAN© 08082024® </b>  
+  </font>  
+  <font color = "red" size = "1px">  
+    <br><b> PENAFIAN : PENGIRAAN INI BERDASARKAN SUMBER DARI INTERNET DAN MUNGKIN KURANG TEPAT !  </b> 
+<br><b> SEGALA TINDAKAN ADALAH TANGGUNGJAWAB ANDA SENDIRI, HARAP MAKLUM !  </b> 	
+  </font>  
+ </div>
+
+
+
+
+ </body>
+ 
+ 
+ 
